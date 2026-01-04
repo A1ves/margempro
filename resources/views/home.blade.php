@@ -1,48 +1,65 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Margen Pro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {},
-                fontFamily: {
-                    sans: ['Inter', 'Inter Tight', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                },
-            },
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-</head>
-<body class="bg-[#F0FDF4] min-h-screen flex items-center justify-center font-sans">
+<x-layout>
+<body class="bg-backgroud min-h-screen flex items-center justify-center bg-grid-yellow">
 
     <section class="w-full px-6">
-        <div class="max-w-2xl mx-auto text-center">
-            <h1 class="text-6xl font-bold text-[#1A2E1A]">
-                Precificação 3D para o<br>seu <span class="text-[#16A34A]">Sucesso SaaS</span>
+        <ul class="flex items-center justify-center gap-2 text-xs font-bold mb-12 text-[rgb(0_0_0)]/40 tracking-[.3rem]">
+            <li>SIMPLES</li>
+            <li>•</li>
+            <li>INTELIGENTE</li>
+            <li>•</li>
+            <li>VISUAL</li>
+        </ul>
+
+        <div class="max-w-3xl mx-auto text-center">
+            <h1
+                class="font-extrabold font-sans transform skew-x-[-13deg]
+                       tracking-[-.1rem] sm:tracking-[-.2rem] md:tracking-[-.3rem]
+                       text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight"
+            >
+                {{-- Mobile / até md: 2 linhas --}}
+                <span class="block md:hidden">
+                    Domine seus lucros
+                </span>
+                <span class="block md:hidden">
+                    sem complicação
+                </span>
+
+                {{-- De md pra cima: 3 linhas --}}
+                <span class="hidden md:block">
+                    Domine seus
+                </span>
+                <span class="hidden md:block">
+                    lucros
+                </span>
+                <span class="hidden md:block">
+                    sem complicação
+                </span>
             </h1>
 
-            <p class="mt-4 text-lg text-gray-600">
-                Calculadora de custos, análise de margem e simuladores de cenário<br>
-                tudo em um só lugar. Design moderno para decisões rápidas.
+            <p class="mt-5 font-bold text-[rgb(0_0_0)]/80 text-lg sm:text-xl md:text-2xl leading-relaxed">
+                Transforme seus rascunhos em decisões lucrativas com o MargemPro.
+                Design intuitivo para quem foca no que importa: o crescimento.
             </p>
 
-            <div class="mt-6">
-                <a href="#" class="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
-                    Comeceçar Agora
-                </a>
-                <a href="#" class="inline-block px-6 py-3 text-green-600 bg-white rounded-lg hover:bg-green-100 transition border b-2">
-                    Entrar
+            <div class="py-8 flex justify-center">
+                <a
+                    href="{{ route('view.login') }}"
+                    class="button-primary shadow
+                           flex items-center justify-center gap-4
+                           text-lg sm:text-xl font-semibold w-full sm:w-auto"
+                >
+                    ACESSAR AGORA
+                    <x-arrow-right class="arrow-right w-6 h-6"/>
                 </a>
             </div>
+
+            <ul class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-16
+                       text-[0.65rem] sm:text-xs font-bold mt-4 sm:mt-8 text-[rgb(0_0_0)]/60 tracking-[.1rem]">
+                <li>CUSTOS REAIS</li>
+                <li>MARGENS SEGURAS</li>
+                <li>IA INTELIGENTE</li>
+            </ul>
         </div>
     </section>
-
 </body>
-</html>
+</x-layout>
