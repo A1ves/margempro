@@ -7,9 +7,13 @@ use Illuminate\View\View;
 
 class DashboardController extends Controller
 {
+    public function index(): View
+    {
+        return view('dashboard');
+    }
 
-public function index(): View
-{
-    return view('dashboard');
-}
+    public function development()
+    {
+        return view('development');
+    }
 }
