@@ -1,5 +1,5 @@
 <x-layout>
-    <body class="bg-[#A5B4FC] flex min-h-screen items-center justify-center px-4">
+    <main class="bg-[#A5B4FC] flex min-h-screen items-center justify-center px-4">
         <div class="w-full max-w-md bg-white
         flex flex-col items-center justify-around shadow py-8 rounded-lg">
 
@@ -17,7 +17,7 @@
                         SEU E-MAIL
                     </label>
                     <input type="email" name="email" placeholder="email@email.com"
-                           class="border min-h-12 sm:min-h-14 pl-3 text-sm sm:text-base"/>
+                           class="border min-h-12 sm:min-h-10 pl-3 text-sm sm:text-base"/>
                     @error('email')
                         <p class="text-red-500 text-xs sm:text-sm">
                             {{ $message }}
@@ -30,7 +30,7 @@
                         SUA SENHA
                     </label>
                     <input type="password" name="password" placeholder="******"
-                           class="border min-h-12 sm:min-h-14 pl-3 text-sm sm:text-base"/>
+                           class="border min-h-12 sm:min-h-10 pl-3 text-sm sm:text-base"/>
                     @error('password')
                     <p class="text-red-500 text-xs sm:text-sm">
                         {{ $message }}
@@ -46,7 +46,7 @@
                     <x-arrow-right class="arrow-right w-4 h-4"/>
                 </button>
 
-                <a href="#"
+                <a href="{{ route('view.register') }}"
                    class="button-secondary shadow
                    flex items-center justify-center gap-2
                    text-md font-semibold w-full mt-4 py-2 px-3">
@@ -61,5 +61,5 @@
 
             </form>
         </div>
-    </body>
+    </main>
 </x-layout>
