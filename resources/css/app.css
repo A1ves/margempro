@@ -32,6 +32,7 @@
     letter-spacing: 0.02em;
     overflow: hidden;
     cursor: pointer;
+    max-height: 60px;
 }
 
 .button-primary .arrow-right {
@@ -54,7 +55,28 @@
     cursor: pointer;
     font-size: 0.85em;
     transition: font-size 0.6s;
-    max-height: 70px;
+    max-height: 50px;
+}
+
+.button-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 2rem;
+    gap: 3px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 10%;
+    font-size: 1em;
+    transition: font-size 0.6s;
+}
+
+.button-nav:hover {
+    font-size: 1.15em;
 }
 
 .button-secondary:hover {
@@ -72,6 +94,11 @@
     border-radius: 8px;
 }
 
+.border-nav{
+    border: 5px solid #000;
+    border-radius: 8px;
+}
+
 .cta{
     color: rgba(0,0,0,0.6);
     transition: 0.4s;
@@ -79,4 +106,31 @@
 
 .cta:hover{
     color: rgba(0,0,0,1);
+}
+
+.check{
+    color: rgba(0,0,0,0.4);
+    margin-right: 8px;
+}
+
+.button-exit{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F87171;
+    padding: 1rem 2rem;
+    gap: 3px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 9%;
+    font-size: 1em;
+    transition: font-size 0.6s;
+}
+
+.button-exit:hover {
+    font-size: 1.15em;
 }
