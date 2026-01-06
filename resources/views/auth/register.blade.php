@@ -109,5 +109,5 @@
                 </a>
             </form>
         </div>
-    </body>
+    </main>
 </x-layout>
